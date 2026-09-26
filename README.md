@@ -1,4 +1,4 @@
-# 💈 Financia app
+# 💳 Financia app
 
 <div align="center">
 
