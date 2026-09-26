@@ -26,7 +26,7 @@ O Financia App é um aplicativo mobile desenvolvido como projeto de extensão ac
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **React Native** - Desenvolvimento mobile multiplataforma (Android e iOS)
 - **Expo** - Facilitação de build e testes
