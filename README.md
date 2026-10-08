@@ -17,7 +17,7 @@ O Financia App é um aplicativo mobile desenvolvido como projeto de extensão ac
 ### 👨‍🏫 Equipe e Orientação
 
 - **Professor**: Rodrigo Fontes
-- **Desenvolvedor**: Marcos Paulo
+- **Desenvolvedor**: Marcos Paulo, Alef
 
 ---
 
