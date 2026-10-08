@@ -50,4 +50,36 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
     marginLeft: 6,
   },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContainer: {
+    backgroundColor: '#fff',
+    width: '80%',
+    padding: 20,
+    borderRadius: 16,
+    alignItems: 'center',
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    color: colors.textDark,
+  },
+  modalOption: {
+    width: '100%',
+    padding: 15,
+    backgroundColor: '#f5f5f5',
+    borderRadius: 8,
+    marginBottom: 10,
+    alignItems: 'center',
+  },
+  modalOptionText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: colors.primary,
+  }
 });

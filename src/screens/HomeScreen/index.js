@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View, Modal } from 'react-native';
 
 import { useRouter } from 'expo-router';
 import BalanceCard from '../../components/BalanceCard';
@@ -9,7 +10,6 @@ import Header from '../../components/Header';
 import { colors } from '../../theme/colors';
 import { styles } from './styles';
 
-// Dados de exemplo — tenho que trocar depois por dados vindos de uma API/estado global
 const RECENT_EXPENSES = [
   {
     id: '1',
@@ -39,6 +39,7 @@ const RECENT_EXPENSES = [
 
 export default function HomeScreen() {
   const router = useRouter();
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={styles.screen}>
@@ -73,12 +74,48 @@ export default function HomeScreen() {
 
         <TouchableOpacity
           style={styles.addButton}
-          onPress={() => router.push('/add-expense')}
+          onPress={() => setModalVisible(true)}
         >
           <Ionicons name="add" size={20} color="#fff" />
           <Text style={styles.addButtonText}>Adicionar</Text>
         </TouchableOpacity>
       </ScrollView>
+
+      <Modal
+        visible={modalVisible}
+        transparent={true}
+        animationType="fade"
+      >
+        <TouchableOpacity 
+          style={styles.modalOverlay} 
+          activeOpacity={1} 
+          onPress={() => setModalVisible(false)}
+        >
+          <View style={styles.modalContainer}>
+            <Text style={styles.modalTitle}>O que você deseja adicionar?</Text>
+            
+            <TouchableOpacity 
+              style={styles.modalOption}
+              onPress={() => {
+                setModalVisible(false);
+                router.push('/add-expense');
+              }}
+            >
+              <Text style={styles.modalOptionText}>Despesa</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity 
+              style={styles.modalOption}
+              onPress={() => {
+                setModalVisible(false);
+                router.push('/add-income');
+              }}
+            >
+              <Text style={styles.modalOptionText}>Receita</Text>
+            </TouchableOpacity>
+          </View>
+        </TouchableOpacity>
+      </Modal>
 
       <BottomNav activeTab="inicio" />
     </View>
