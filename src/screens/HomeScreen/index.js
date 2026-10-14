@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
-import { Ionicons } from '@expo/vector-icons';
-import { ScrollView, Text, TouchableOpacity, View, Modal } from 'react-native';
+import React, { useState } from "react";
+import { Ionicons } from "@expo/vector-icons";
+import { ScrollView, Text, TouchableOpacity, View, Modal } from "react-native";
 
-import { useRouter } from 'expo-router';
-import BalanceCard from '../../components/BalanceCard';
-import BottomNav from '../../components/BottomNav';
-import ExpenseItem from '../../components/ExpenseItem';
-import Header from '../../components/Header';
-import { colors } from '../../theme/colors';
-import { styles } from './styles';
+import { useRouter } from "expo-router";
+import BalanceCard from "../../components/BalanceCard";
+import BottomNav from "../../components/BottomNav";
+import ExpenseItem from "../../components/ExpenseItem";
+import Header from "../../components/Header";
+import { colors } from "../../theme/colors";
+import { styles } from "./styles";
 
 const RECENT_EXPENSES = [
   {
-    id: '1',
-    icon: 'fast-food-outline',
+    id: "1",
+    icon: "fast-food-outline",
     iconBg: colors.iconFoodBg,
-    title: 'Alimentação',
-    date: '16/08/2026',
+    title: "Alimentação",
+    date: "16/08/2026",
     value: 35,
   },
   {
-    id: '2',
-    icon: 'car-outline',
+    id: "2",
+    icon: "car-outline",
     iconBg: colors.iconTransportBg,
-    title: 'Transporte',
-    date: '16/08/2026',
+    title: "Transporte",
+    date: "16/08/2026",
     value: 20,
   },
   {
-    id: '3',
-    icon: 'game-controller-outline',
+    id: "3",
+    icon: "game-controller-outline",
     iconBg: colors.iconLeisureBg,
-    title: 'Lazer',
-    date: '15/08/2026',
+    title: "Lazer",
+    date: "15/08/2026",
     value: 50,
   },
 ];
@@ -81,34 +81,30 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </ScrollView>
 
-      <Modal
-        visible={modalVisible}
-        transparent={true}
-        animationType="fade"
-      >
-        <TouchableOpacity 
-          style={styles.modalOverlay} 
-          activeOpacity={1} 
+      <Modal visible={modalVisible} transparent={true} animationType="fade">
+        <TouchableOpacity
+          style={styles.modalOverlay}
+          activeOpacity={1}
           onPress={() => setModalVisible(false)}
         >
           <View style={styles.modalContainer}>
             <Text style={styles.modalTitle}>O que você deseja adicionar?</Text>
-            
-            <TouchableOpacity 
+
+            <TouchableOpacity
               style={styles.modalOption}
               onPress={() => {
                 setModalVisible(false);
-                router.push('/add-expense');
+                router.push("/add-expense");
               }}
             >
               <Text style={styles.modalOptionText}>Despesa</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity 
+            <TouchableOpacity
               style={styles.modalOption}
               onPress={() => {
                 setModalVisible(false);
-                router.push('/add-income');
+                router.push("/add-income");
               }}
             >
               <Text style={styles.modalOptionText}>Receita</Text>
@@ -117,7 +113,14 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </Modal>
 
-      <BottomNav activeTab="inicio" />
+      <BottomNav
+        activeTab="inicio"
+        onChangeTab={(tab) => {
+          if (tab === "config") {
+            router.push("/settings");
+          }
+        }}
+      />
     </View>
   );
 }
