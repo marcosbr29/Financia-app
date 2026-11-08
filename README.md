@@ -22,7 +22,11 @@ O Financia App é um aplicativo mobile desenvolvido como projeto de extensão ac
 ---
 
 ## ✨ Funcionalidades
+components: armazena componentes reutilizáveis utilizados em diferentes partes do aplicativo.
 
+screens: contém as telas principais, como início, cadastro de receitas, cadastro de despesas, histórico, relatórios e configurações.
+
+assets: armazena imagens, ícones e outros recursos visuais.
 
 ---
 
@@ -36,7 +40,12 @@ O Financia App é um aplicativo mobile desenvolvido como projeto de extensão ac
 ---
 
 ## 📱 Estrutura do Projeto
-    ```
+components: armazena componentes reutilizáveis utilizados em diferentes partes do aplicativo.
+
+screens: contém as telas principais, como início, cadastro de receitas, cadastro de despesas, histórico, relatórios e configurações.
+
+
+assets: armazena imagens, ícones e outros recursos visuais.```
 ---
 
 ## 🛠️ Como Executar o Projeto
@@ -71,6 +80,14 @@ Pressione a para abrir no emulador Android
 Pressione i para abrir no emulador iOS
 
 ## 📦 Principais Dependências
-  
+React Native: framework utilizado para desenvolver a interface do aplicativo para dispositivos móveis.
+
+JavaScript: linguagem de programação utilizada na implementação da lógica e das funcionalidades.
+
+Expo: ferramenta que facilita a configuração, execução e desenvolvimento de aplicativos utilizando React Native.
+
+AsyncStorage ou SQLite: opções de armazenamento local que podem ser utilizadas para guardar informações financeiras no dispositivo.
+
+React Navigation: biblioteca utilizada para organizar a navegação entre as diferentes telas do aplicativo.
 
 
