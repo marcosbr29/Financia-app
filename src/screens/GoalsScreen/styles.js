@@ -1,0 +1,261 @@
+
+import { StyleSheet } from "react-native";
+import { colors, spacing } from "../../theme/colors";
+
+export const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
+  scroll: {
+    flex: 1,
+  },
+  content: {
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.md,
+    paddingBottom: spacing.xl,
+  },
+  intro: {
+    marginBottom: spacing.md,
+  },
+  description: {
+    fontSize: 14,
+    color: colors.textGray,
+    lineHeight: 21,
+  },
+  addButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: colors.primary,
+    borderRadius: 12,
+    paddingVertical: 14,
+    gap: 8,
+    marginBottom: spacing.lg,
+  },
+  addButtonText: {
+    color: colors.white,
+    fontSize: 15,
+    fontWeight: "600",
+  },
+  sectionTitle: {
+    fontSize: 17,
+    fontWeight: "700",
+    color: colors.textDark,
+    marginBottom: spacing.md,
+  },
+  goalCard: {
+    backgroundColor: colors.white,
+    borderWidth: 1,
+    borderColor: colors.background,
+    borderRadius: 16,
+    padding: spacing.md,
+    marginBottom: spacing.md,
+  },
+  goalHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: spacing.lg,
+    gap: spacing.sm,
+  },
+  goalIcon: {
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    backgroundColor: "#0F9D6C15",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  goalInfo: {
+    flex: 1,
+  },
+  goalName: {
+    fontSize: 15,
+    fontWeight: "700",
+    color: colors.textDark,
+  },
+  goalStatus: {
+    fontSize: 12,
+    color: colors.textGray,
+    marginTop: 4,
+  },
+  goalActions: {
+    flexDirection: "row",
+    gap: 6,
+  },
+  actionButton: {
+    width: 34,
+    height: 34,
+    borderRadius: 9,
+    backgroundColor: colors.background,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  progressInfo: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 8,
+  },
+  progressLabel: {
+    fontSize: 13,
+    color: colors.textGray,
+  },
+  progressPercentage: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: colors.primary,
+  },
+  progressBackground: {
+    height: 9,
+    backgroundColor: colors.background,
+    borderRadius: 10,
+    overflow: "hidden",
+  },
+  progressFill: {
+    height: "100%",
+    borderRadius: 10,
+  },
+  valuesContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: spacing.md,
+  },
+  targetContainer: {
+    alignItems: "flex-end",
+  },
+  valueLabel: {
+    fontSize: 12,
+    color: colors.textGray,
+    marginBottom: 5,
+  },
+  currentValue: {
+    fontSize: 15,
+    fontWeight: "700",
+    color: colors.primary,
+  },
+  targetValue: {
+    fontSize: 15,
+    fontWeight: "600",
+    color: colors.textDark,
+  },
+  emptyContainer: {
+    alignItems: "center",
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.xl,
+  },
+  emptyIcon: {
+    width: 68,
+    height: 68,
+    borderRadius: 34,
+    backgroundColor: "#0F9D6C15",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: spacing.md,
+  },
+  emptyTitle: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: colors.textDark,
+    marginBottom: 8,
+  },
+  emptyDescription: {
+    fontSize: 13,
+    color: colors.textGray,
+    textAlign: "center",
+    lineHeight: 20,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.4)",
+    justifyContent: "center",
+    padding: spacing.lg,
+  },
+  modalContent: {
+    backgroundColor: colors.white,
+    borderRadius: 18,
+    padding: spacing.lg,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: colors.textDark,
+    marginBottom: spacing.lg,
+    textAlign: "center",
+  },
+  inputLabel: {
+    fontSize: 13,
+    color: colors.textGray,
+    marginBottom: 6,
+    marginTop: spacing.sm,
+  },
+  input: {
+    height: 48,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    paddingHorizontal: spacing.md,
+    fontSize: 15,
+    color: colors.textDark,
+  },
+  modalButtons: {
+    flexDirection: "row",
+    gap: spacing.sm,
+    marginTop: spacing.lg,
+  },
+  cancelButton: {
+    flex: 1,
+    height: 46,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  cancelButtonText: {
+    color: colors.textDark,
+    fontSize: 14,
+    fontWeight: "600",
+  },
+  saveButton: {
+    flex: 1,
+    height: 46,
+    borderRadius: 12,
+    backgroundColor: colors.primary,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  deleteButton: {
+    flex: 1,
+    height: 46,
+    borderRadius: 12,
+    backgroundColor: colors.expense,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  disabledButton: {
+    opacity: 0.6,
+  },
+  saveButtonText: {
+    color: colors.white,
+    fontSize: 14,
+    fontWeight: "600",
+  },
+  deleteIcon: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: "#E24C4C15",
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: spacing.md,
+  },
+  confirmationText: {
+    fontSize: 14,
+    color: colors.textGray,
+    lineHeight: 21,
+    textAlign: "center",
+  },
+  confirmationName: {
+    color: colors.textDark,
+    fontWeight: "700",
+  },
+});
