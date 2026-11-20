@@ -2,9 +2,8 @@
 
 <div align="center">
 
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+[![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
 
 </div>
 
@@ -53,8 +52,7 @@ O Financia App é um aplicativo mobile desenvolvido como projeto de extensão ac
 ---
 
 ## 📱 Estrutura do Projeto
-
-```text
+```
 Financia-app/
 ├── app/
 │   └── Rotas e layout do Expo Router
@@ -83,37 +81,71 @@ Financia-app/
 
 - Node.js compatível com a versão do Expo utilizada pelo projeto.
 - npm ou yarn.
-- Expo Go em um dispositivo compatível ou emulador Android/iOS configurado.
+- Expo Go compatível com **Expo SDK 57** em um dispositivo Android ou Android Studio configurado com um emulador.
+- Navegador atualizado para executar a versão Web.
+
+### 📥 Download do Expo Go
+
+Para executar o Financia App em um dispositivo Android, utilize a versão do Expo Go compatível com o SDK 57.
+
+[**Baixar Expo Go — SDK 57 para Android**](https://expo.dev/go?sdkVersion=57&platform=android&device=true)
+
+### ⚙️ Instalação do Expo Go no Android
+
+Caso o Android bloqueie a instalação do aplicativo baixado, pode ser necessário permitir temporariamente a instalação de aplicativos de fontes desconhecidas.
+
+1. Abra as **Configurações** do Android.
+2. Acesse **Aplicativos** e procure a opção **Acesso especial a apps**.
+3. Entre em **Instalar apps desconhecidos**.
+4. Selecione o navegador ou gerenciador de arquivos utilizado para baixar e abrir o instalador.
+5. Ative a opção **Permitir desta fonte**.
+6. Abra o arquivo baixado do Expo Go e confirme a instalação.
+
+**Observação:** os nomes e caminhos dessas opções podem variar de acordo com a versão do Android e o fabricante do dispositivo. Após a instalação, recomenda-se desativar novamente a permissão para a fonte utilizada.
+
+### 🖥️ Configuração do Android Studio
+
+Para executar o aplicativo em um emulador no computador, é necessário configurar o Android Studio.
+
+1. Baixe e instale o [Android Studio](https://developer.android.com/studio).
+2. Durante a configuração, certifique-se de instalar o Android SDK e as ferramentas necessárias.
+3. Abra o Android Studio e acesse o **Device Manager**.
+4. Clique em **Create Virtual Device** para criar um dispositivo virtual.
+5. Escolha um modelo de celular e selecione uma versão do Android disponível.
+6. Finalize a configuração e inicie o emulador criado.
+
+### 🌐 Executar no navegador do computador
+
+Também é possível abrir o Financia App diretamente no navegador, sem utilizar um celular ou emulador.
+
+1. Inicie o projeto com o comando `npx expo start`.
+2. Aguarde o Expo iniciar e disponibilizar os endereços de acesso.
+3. Pressione a tecla **w** no terminal para abrir a versão Web ou copie o endereço Web disponibilizado pelo Expo.
+4. Caso prefira, cole o endereço no navegador do computador.
+
+**Observação:** alguns recursos que dependem de funcionalidades nativas do dispositivo, como armazenamento seguro e autenticação biométrica, podem apresentar limitações ou não funcionar na versão Web.
 
 ### Passos para Instalação
 
 1. **Clone o repositório**
-
-   ```bash
+   ```
    git clone https://github.com/marcosbr29/Financia-app.git
    ```
-
 2. **Entre na pasta do projeto**
-
-   ```bash
+   ```
    cd Financia-app
    ```
-
 3. **Instale as dependências**
-
-   ```bash
+   ```
    npm install
    ```
-
 4. **Inicie o projeto com Expo**
-
-   ```bash
+   ```
    npx expo start
    ```
-
 5. **Execute no dispositivo ou emulador**
 
-   Escaneie o QR Code com o aplicativo Expo Go ou utilize um emulador configurado para executar o projeto.
+   Escaneie o QR Code com o aplicativo Expo Go ou utilize um emulador configurado para executar o projeto. Para abrir no navegador do computador, pressione **w** no terminal.
 
 ---
 

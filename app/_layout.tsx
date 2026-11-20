@@ -49,35 +49,42 @@ export default function RootLayout() {
   }
 
   async function loadSecurityState() {
-    try {
-      const savedPin = await SecureStore.getItemAsync(PIN_KEY);
-
-      if (!savedPin) {
-        setIsLocked(false);
-        setBiometricEnabled(false);
-        setPin("");
-        setErrorMessage("");
-        return;
-      }
-
-      const savedBiometricPreference =
-        await SecureStore.getItemAsync(BIOMETRIC_KEY);
-
-      const biometricAvailable =
-        savedBiometricPreference === "true" &&
-        (await checkBiometricAvailability());
-
-      setBiometricEnabled(biometricAvailable);
-      setPin("");
-      setErrorMessage("");
-      setIsLocked(true);
-    } catch (error) {
-      console.error("Erro ao verificar segurança:", error);
-      setIsLocked(true);
-      setErrorMessage("Não foi possível verificar a segurança. Tente novamente.");
-    }
+  if (Platform.OS === "web") {
+    setIsLocked(false);
+    setBiometricEnabled(false);
+    setPin("");
+    setErrorMessage("");
+    return;
   }
 
+  try {
+    const savedPin = await SecureStore.getItemAsync(PIN_KEY);
+
+    if (!savedPin) {
+      setIsLocked(false);
+      setBiometricEnabled(false);
+      setPin("");
+      setErrorMessage("");
+      return;
+    }
+
+    const savedBiometricPreference =
+      await SecureStore.getItemAsync(BIOMETRIC_KEY);
+
+    const biometricAvailable =
+      savedBiometricPreference === "true" &&
+      (await checkBiometricAvailability());
+
+    setBiometricEnabled(biometricAvailable);
+    setPin("");
+    setErrorMessage("");
+    setIsLocked(true);
+  } catch (error) {
+    console.error("Erro ao verificar segurança:", error);
+    setIsLocked(true);
+    setErrorMessage("Não foi possível verificar a segurança. Tente novamente.");
+  }
+}
   useEffect(() => {
     async function initializeSecurity() {
       await loadSecurityState();
