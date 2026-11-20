@@ -1,3 +1,4 @@
+
 import { StyleSheet } from "react-native";
 import { colors, spacing } from "../../theme/colors";
 
@@ -33,6 +34,82 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
     color: colors.textGray,
     textAlign: "center",
+    marginBottom: spacing.lg,
+  },
+  securityCard: {
+    width: "100%",
+    backgroundColor: colors.white,
+    borderWidth: 1,
+    borderColor: "#E5E7EB",
+    borderRadius: 14,
+    padding: spacing.md,
+  },
+  cardHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+  },
+  cardIcon: {
+    width: 46,
+    height: 46,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  cardInfo: {
+    flex: 1,
+  },
+  cardTitle: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: colors.textDark,
+  },
+  cardDescription: {
+    fontSize: 12,
+    color: colors.textGray,
+    marginTop: 4,
+  },
+  status: {
+    backgroundColor: "#F1F1F1",
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 20,
+  },
+  statusActive: {
+    backgroundColor: "#E2F5EB",
+  },
+  statusText: {
+    fontSize: 11,
+    fontWeight: "600",
+    color: colors.textGray,
+  },
+  statusTextActive: {
+    color: colors.primary,
+  },
+  actions: {
+    marginTop: spacing.md,
+    gap: spacing.sm,
+  },
+  primaryButton: {
+    backgroundColor: colors.primary,
+    padding: spacing.md,
+    borderRadius: 10,
+    alignItems: "center",
+  },
+  primaryButtonText: {
+    color: colors.white,
+    fontSize: 14,
+    fontWeight: "bold",
+  },
+  removeButton: {
+    padding: spacing.sm,
+    alignItems: "center",
+  },
+  removeButtonText: {
+    color: colors.expense,
+    fontSize: 13,
+    fontWeight: "600",
   },
   infoCard: {
     flexDirection: "row",
@@ -41,13 +118,71 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
     padding: spacing.md,
     borderRadius: 12,
-    marginTop: spacing.xl,
+    marginTop: spacing.lg,
     width: "100%",
   },
   infoText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: 12,
+    lineHeight: 19,
     color: colors.textDark,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: spacing.lg,
+  },
+  modalCard: {
+    width: "100%",
+    backgroundColor: colors.white,
+    borderRadius: 18,
+    padding: spacing.lg,
+    alignItems: "center",
+  },
+  modalIcon: {
+    width: 60,
+    height: 60,
+    borderRadius: 18,
+    backgroundColor: colors.background,
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: spacing.md,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: colors.textDark,
+    textAlign: "center",
+  },
+  modalDescription: {
+    fontSize: 13,
+    color: colors.textGray,
+    textAlign: "center",
+    lineHeight: 20,
+    marginTop: spacing.sm,
+    marginBottom: spacing.lg,
+  },
+  pinInput: {
+    width: "100%",
+    borderWidth: 1,
+    borderColor: "#D1D5DB",
+    borderRadius: 10,
+    padding: spacing.md,
+    fontSize: 22,
+    letterSpacing: 8,
+    textAlign: "center",
+    color: colors.textDark,
+    marginBottom: spacing.md,
+  },
+  cancelButton: {
+    padding: spacing.md,
+    marginTop: spacing.xs,
+  },
+  cancelButtonText: {
+    color: colors.textGray,
+    fontSize: 14,
+    fontWeight: "600",
   },
 });

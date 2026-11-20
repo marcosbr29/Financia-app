@@ -1,3 +1,4 @@
+
 import { StyleSheet } from "react-native";
 import { colors, spacing } from "../../theme/colors";
 
@@ -14,7 +15,29 @@ export const styles = StyleSheet.create({
   description: {
     fontSize: 14,
     color: colors.textGray,
-    marginBottom: spacing.md,
+    lineHeight: 21,
+    marginBottom: spacing.lg,
+  },
+  addButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: colors.primary,
+    borderRadius: 12,
+    paddingVertical: 14,
+    gap: 8,
+    marginBottom: spacing.lg,
+  },
+  addButtonText: {
+    color: colors.white,
+    fontSize: 15,
+    fontWeight: "600",
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: colors.textDark,
+    marginBottom: spacing.sm,
   },
   category: {
     flexDirection: "row",
@@ -31,9 +54,125 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  categoryName: {
+  categoryInfo: {
     flex: 1,
+  },
+  categoryName: {
     fontSize: 15,
     color: colors.textDark,
+    fontWeight: "500",
+  },
+  categoryType: {
+    fontSize: 12,
+    color: colors.textGray,
+    marginTop: 3,
+  },
+  actions: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  actionButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    backgroundColor: colors.background,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  emptyText: {
+    textAlign: "center",
+    color: colors.textGray,
+    marginTop: spacing.xl,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.4)",
+    justifyContent: "center",
+    padding: spacing.lg,
+  },
+  modalContent: {
+    backgroundColor: colors.white,
+    borderRadius: 18,
+    padding: spacing.lg,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: colors.textDark,
+    marginBottom: spacing.md,
+    textAlign: "center",
+  },
+  inputLabel: {
+    fontSize: 13,
+    color: colors.textGray,
+    marginBottom: 6,
+  },
+  input: {
+    height: 48,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    paddingHorizontal: spacing.md,
+    fontSize: 15,
+    color: colors.textDark,
+  },
+  modalButtons: {
+    flexDirection: "row",
+    gap: spacing.sm,
+    marginTop: spacing.lg,
+  },
+  cancelButton: {
+    flex: 1,
+    height: 46,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  cancelButtonText: {
+    color: colors.textDark,
+    fontSize: 14,
+    fontWeight: "600",
+  },
+  saveButton: {
+    flex: 1,
+    height: 46,
+    borderRadius: 12,
+    backgroundColor: colors.primary,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  deleteButton: {
+    flex: 1,
+    height: 46,
+    borderRadius: 12,
+    backgroundColor: colors.expense,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  saveButtonText: {
+    color: colors.white,
+    fontSize: 14,
+    fontWeight: "600",
+  },
+  deleteIcon: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: `${colors.expense}15`,
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: spacing.md,
+  },
+  confirmationText: {
+    fontSize: 14,
+    color: colors.textGray,
+    lineHeight: 21,
+    textAlign: "center",
+  },
+  confirmationName: {
+    color: colors.textDark,
+    fontWeight: "700",
   },
 });
